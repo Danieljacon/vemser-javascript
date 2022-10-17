@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Calcular idade -->
+    <section>
+        <h1>Sua idade é: <span id="idade"></span></h1>
+    </section>
+    <script>
+        const idade = document.getElementById("idade");
+        function calcularIdade(ano) {
+            return idade = idade.innerText = `${2022 - ano}`;
+        };
+
+        let anoDeNascimento = prompt("Você nasceu em que ano?")
+        calcularIdade(anoDeNascimento);
+    </script>
+</body>
+
+</html>
