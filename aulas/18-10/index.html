@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula de DOM - Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container border-3 border p-3 my-3">
+        <h3>getElementById</h3>
+        <p id="trocar" style="font-size: 2.625rem;">Manipulando o DOM</p>
+        <input onclick="changeColor('blue');" class="btn btn-primary" value="Azul">
+        <input onclick="changeColor('red');" class="btn btn-danger" value="Vermelho">
+    </section>
+
+    <section class="container border-3 border p-3">
+        <h3>Eventos</h3>
+        <button class="btn btn-warning">Cores aleatórias</button>
+        <button onclick="window.location.reload();" class="btn btn-danger">Resetar</butt>
+
+            <script>
+                const btn = document.querySelector("button");
+
+                function numAleatorio(num) {
+                    return Math.floor(Math.random() * (num + 1));
+                };
+
+                btn.addEventListener("click", () => {
+                    const corAleatoria =
+                        `rgb(${numAleatorio(255)}, ${numAleatorio(255)}, ${numAleatorio(255)})`;
+                    document.body.style.backgroundColor = corAleatoria;
+                })
+            </script>
+    </section>
+
+    <section class="container border-3 border p-3 my-3">
+        <h3>Alterar o texto usando Button</h3>
+        <h2 id="exibir1">Luke</h2>
+        <input type="button" onclick="document.getElementById('exibir1').innerText = 'Eu sou seu pai';"
+            value="Mudar texto" class="btn btn-info">
+    </section>
+
+    <section class="container border-3 border p-3 my-3">
+        <h3>Create Element</h3>
+        <div id="h1NewElement"></div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
