@@ -45,8 +45,8 @@
         <section class="exercicio-2 exercicio bg-dark text-white p-2 rounded-3 text-center text-uppercase">
             Exercício 2
 
-            <button onclick="exercicio2();" type="button" class="btn btn-light mt-2 text-uppercase fw-bold" data-bs-toggle="modal"
-                data-bs-target="#exercicio-2">
+            <button onclick="exercicio2();" type="button" class="btn btn-light mt-2 text-uppercase fw-bold"
+                data-bs-toggle="modal" data-bs-target="#exercicio-2">
                 Abrir
             </button>
 
@@ -70,11 +70,82 @@
             </div>
             <script src="./js/exercicio-2.js"></script>
         </section>
+
+        <section class="exercicio-3 exercicio bg-dark text-white p-2 rounded-3 text-center text-uppercase">
+            Exercício 3
+
+            <button onclick="exercicio3();" type="button" class="btn btn-light mt-2 text-uppercase fw-bold"
+                data-bs-toggle="modal" data-bs-target="#exercicio-3">
+                Abrir
+            </button>
+
+            <div class="modal fade" id="exercicio-3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content p-3 d-flex flex-column  bg-dark">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-white">
+                            <div>
+                                <h1 class="text-center">Exercício 3</h1>
+                                <p class="text-center" id="e2-text-color">Valor atual: <span id="e3-value">0</span></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-light" id="e3-add">Adicionar + 1</button>
+                                <button class="btn btn-light" id="e3-reset">Resetar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/exercicio-3.js"></script>
+        </section>
+
+        <section class="exercicio-4 exercicio bg-dark text-white p-2 rounded-3 text-center text-uppercase">
+            Exercício 4
+
+            <button onclick="exercicio4();" type="button" class="btn btn-light mt-2 text-uppercase fw-bold"
+                data-bs-toggle="modal" data-bs-target="#exercicio-4">
+                Abrir
+            </button>
+
+            <div class="modal fade" id="exercicio-4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content p-3 d-flex flex-column  bg-dark">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-white">
+                            <div>
+                                <h1 class="text-center">Exercício 4</h1>
+                                <img class="img-fluid rounded-2 mb-2" id="e4-image"
+                                    src="https://criticalhits.com.br/wp-content/uploads/2022/10/Rhaenys-Targaryen.jpg"
+                                    alt="Rhaenys Targaryen">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <label for="sepia">Sepia Filter</label>
+                                    <input type="range" id="sepia" value="0" step="5">
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <button id="opacity" class="btn btn-light">Opacity</button>
+                                    <button id="greyscale" class="btn btn-light">Greyscale</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/exercicio-4.js"></script>
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-    <script defer src="./js/script.js"></script>
 </body>
 
 </html>
