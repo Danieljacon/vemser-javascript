@@ -1,0 +1,55 @@
+.container-exercicios {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exercicios {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 15px;
+}
+
+.exercicio {
+    display: flex;
+    flex-direction: column;
+}
+
+#teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.igual {
+    grid-row: span 2;
+}
+
+.btn-clear {
+    grid-column: span 2;
+}
+
+@keyframes background {
+  from   {
+    bottom: -100%;
+    opacity: .8;
+  }
+  to  {
+    bottom: 100%;
+    opacity: 1;
+  }
+}
+.animation-background {
+    animation: background 8s infinite linear;
+    transition: all .5s ease-in-out;
+}
+
+.name {
+    position: fixed;
+    right: 0;
+    font-weight: 700;
+    height: 450px;
+    writing-mode: vertical-lr;
+}
