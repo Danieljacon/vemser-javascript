@@ -4,6 +4,7 @@ const exercicio5 = () => {
   let value1 = document.getElementById("e5-value-1");
   let value2 = document.getElementById("e5-value-2");
   const operation = document.getElementsByName("operation");
+  const resetar = document.getElementById("e5-resetar")
 
   calc.addEventListener("click", (e) => {
     e.preventDefault();
@@ -32,4 +33,8 @@ const exercicio5 = () => {
       }
     });
   });
+
+  resetar.addEventListener("click", () => {
+    result.innerText = "";
+  })
 };
