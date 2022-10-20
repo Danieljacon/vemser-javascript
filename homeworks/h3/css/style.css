@@ -17,18 +17,16 @@
     flex-direction: column;
 }
 
-#teclas {
+.hotel {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
-.igual {
-    grid-row: span 2;
-}
-
-.btn-clear {
-    grid-column: span 2;
+.s4-hotel-estender {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    gap: 10px;
 }
 
 @keyframes background {
