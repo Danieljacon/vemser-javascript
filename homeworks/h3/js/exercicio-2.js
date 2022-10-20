@@ -2,7 +2,7 @@ const resultado = document.getElementById("e2-resultado");
 let pares = [];
 let somaTodosOsPares = 0;
 
-for (let i = 0; i <= 50; i++) {
+for (let i = 0; i <= 100; i++) {
   i % 2 === 0 && (pares = [...pares, i]);
 }
 
