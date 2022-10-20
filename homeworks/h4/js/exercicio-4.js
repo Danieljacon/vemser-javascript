@@ -3,6 +3,8 @@ const exercicio4 = () => {
   const trevasSoma = document.getElementById("e3-trevas-soma");
   const castelos = document.getElementById("e3-castelos");
   const castelosSoma = document.getElementById("e3-castelos-soma");
+  trevas.innerHTML = "";
+  castelos.innerHTML = "";
 
   let trevasSomaValor = 0;
   let castelosSomaValor = 0;
