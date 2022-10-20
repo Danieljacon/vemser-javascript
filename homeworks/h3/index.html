@@ -32,7 +32,8 @@
                             <div class="modal-body text-white">
                                 <div>
                                     <h1 class="text-center">Exercício 1</h1>
-                                    <p class="text-center" id="e1-text-note">Digite suas notas para checar sua média.</p>
+                                    <p class="text-center" id="e1-text-note">Digite suas notas para checar sua média.
+                                    </p>
                                 </div>
                                 <form action="" class="form-control bg-dark text-white">
                                     <div>
@@ -47,7 +48,8 @@
                                         <label for="e1-nota3">Nota 3</label>
                                         <input type="number" id="e1-nota3" placeholder="0">
                                     </div>
-                                    <input type="submit" value="Calcular média" id="e1-calcular" class="btn btn-light mt-2">
+                                    <input type="submit" value="Calcular média" id="e1-calcular"
+                                        class="btn btn-light mt-2">
                                 </form>
                             </div>
                         </div>
@@ -172,8 +174,10 @@
                                     <h3 id="e5-resultado"></h3>
                                 </div>
                                 <form onsubmit="compararSubstancias(this);">
-                                    <input class="form-control" type="number" id="e5-subst-1" placeholder="Substância 1" value="4">
-                                    <input class="form-control mt-2" type="number" id="e5-subst-2" placeholder="Substância 2" value="2">
+                                    <input class="form-control" type="number" id="e5-subst-1" placeholder="Substância 1"
+                                        value="4">
+                                    <input class="form-control mt-2" type="number" id="e5-subst-2"
+                                        placeholder="Substância 2" value="2">
                                     <input class="btn btn-light mt-2" id="e5-btn-checar" type="submit" value="Checar">
                                 </form>
                             </div>
@@ -205,12 +209,42 @@
                                     <p>Abaixo os números pares de 1 a 100 (no Console também)</p>
                                     <h3 id="e6-resultado"></h3>
                                 </div>
-                                <button class="btn btn-light mt-2" id="e6-btn-checar">Checar os números pares até 100</button>
+                                <button class="btn btn-light mt-2" id="e6-btn-checar">Checar os números pares até
+                                    100</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <script src="./js/exercicio-6.js"></script>
+            </section>
+
+            <section class="exercicio-7 exercicio bg-dark text-white p-2 rounded-3 text-center text-uppercase">
+                Exercício 7
+
+                <button type="button" class="btn btn-light mt-2 text-uppercase fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#exercicio-7">
+                    Abrir
+                </button>
+
+                <div class="modal fade" id="exercicio-7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content p-3 d-flex flex-column  bg-dark">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-white">
+                                <div>
+                                    <h1 class="text-center">Exercício 7</h1>
+                                    <h3 id="e7-resultado"></h3>
+                                </div>
+                                <input type="text" class="form-control my-2" placeholder="Digite alguma coisa!" id="e7-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="./js/exercicio-7.js"></script>
             </section>
         </main>
         <h1 class="name animation-background">Daniel Jacon - #vemser</h1>
