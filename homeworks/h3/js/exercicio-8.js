@@ -21,6 +21,7 @@ const aumentoDepois2017 = () => {
   for (let i = 2017; i <= anoAtual; i++) {
     ajuste = ajuste * 2;
     salario = (salario * (ajuste / 100 + 1)).toFixed(2);
+    console.log(ajuste, salario);
   }
   displayDepois2017.innerHTML = `R$${salario}`;
 };
