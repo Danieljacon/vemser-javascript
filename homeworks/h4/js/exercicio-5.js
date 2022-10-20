@@ -3,37 +3,37 @@ const exercicio5 = () => {
   const queijosEsquecidos = ["provolone", "ricota", "mascarpone"];
   const queijosJuntos = queijos.concat(queijosEsquecidos);
 
-  const telaListaDeQueijo = document.getElementById("e5-lista-de-queijos");
-  const telaListaDeQueijosEsquecidos = document.getElementById(
-    "e5-lista-de-queijos-esquecidos"
-  );
-  const telaListaDeQueijosJuntos = document.getElementById(
-    "e5-lista-de-queijos-juntos"
-  );
-  const telaQueijosCrescente = document.getElementById(
-    "e5-lista-de-queijos-crescente"
-  );
+  const elementos = [
+    {
+      telaQueijos: document.getElementById("e5-lista-de-queijos"),
+      lista: queijos,
+      text: "Lista de queijos",
+    },
+    {
+      telaQueijos: document.getElementById("e5-lista-de-queijos-esquecidos"),
+      lista: queijosEsquecidos,
+      text: "Lista de queijos esquecidos",
+    },
+    {
+      telaQueijos: document.getElementById("e5-lista-de-queijos-crescente"),
+      lista: queijosJuntos.sort(),
+      text: "Lista de queijos juntos e em ordem crescente",
+    },
+    {
+      telaQueijos: document.getElementById("e5-lista-de-queijos-cottage"),
+      lista: queijosJuntos.concat("cottage").sort(),
+      text: "Lista de queijos que contém a palavra cottage, em ordem crescente",
+    },
+  ];
 
-  const telaQueijoCottage = document.getElementById(
-    "e5-lista-de-queijos-cottage"
-  );
+  const paragraph = ({ text, queijo }) => {
+    return `${text}: <span class="text-warning">${queijo.join(", ")}</span>`;
+  };
 
-  telaListaDeQueijo.innerHTML = `Lista de queijos: <span class="text-warning">${queijos.join(", ")}</span>`;
-  telaListaDeQueijosEsquecidos.innerHTML = `Lista de queijos esquecidos: <span class="text-warning">${queijosEsquecidos.join(
-    ", "
-  )}</span>`;
-  telaListaDeQueijosJuntos.innerHTML = `Lista de queijos juntos: <span class="text-warning">${queijosJuntos.join(
-    ", "
-  )}</span>`;
-
-  let queijosCrescente = queijosJuntos.sort();
-  telaQueijosCrescente.innerHTML = `Lista de queijos em ordem crescente: <span class="text-warning">${queijosCrescente.join(
-    ", "
-  )}</span>`;
-
-  queijosCrescente.push("cottage");
-  queijosCrescente = queijosCrescente.sort();
-  telaQueijoCottage.innerHTML = `Lista de queijos em ordem crescente com cottage: <span class="text-warning">${queijosCrescente.join(
-    ", "
-  )}</span>`;
+  elementos.forEach(({ telaQueijos, lista, text }) => {
+    telaQueijos.innerHTML = paragraph({
+      text: text,
+      queijo: lista,
+    });
+  });
 };
