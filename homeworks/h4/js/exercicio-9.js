@@ -65,6 +65,7 @@ const exercicio9 = () => {
     e.suco && sucos.push(e.nome);
     e.cerveja && cervejas.push(e.nome);
   });
+
   displayPizzasPedidas.innerHTML = `Pedidos de pizzas: ${pizzas.join(", ")}`;
   displaySucosPedidos.innerHTML = `Quem pediu suco: ${sucos.join(", ")}`;
   displayRefrigerantsPedidos.innerHTML = `Quem pediu refrigerante: ${refrigerantes.join(", ")}`;

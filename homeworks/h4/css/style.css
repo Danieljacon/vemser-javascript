@@ -1,58 +1,61 @@
 * ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .container-exercicios {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    white-space: wrap;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: wrap;
+  padding: 20px;
 }
 
 .exercicios {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    gap: 15px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .exercicio {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .s4-hotel-estender {
-    display: grid;
-    grid-template-columns: 1fr 30%;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  gap: 10px;
 }
 
 @keyframes background {
-  from   {
+  from {
     bottom: -100%;
-    opacity: .8;
+    opacity: 0.8;
   }
-  to  {
+  to {
     bottom: 100%;
     opacity: 1;
   }
 }
 .animation-background {
-    animation: background 8s infinite linear;
-    transition: all .5s ease-in-out;
+  animation: background 8s infinite linear;
+  transition: all 0.5s ease-in-out;
 }
 
 .name {
-    position: fixed;
-    right: 0;
-    font-weight: 700;
-    height: 450px;
-    writing-mode: vertical-lr;
+  position: fixed;
+  right: 0;
+  font-weight: 700;
+  height: 450px;
+  writing-mode: vertical-lr;
 }
