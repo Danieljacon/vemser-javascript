@@ -6,24 +6,28 @@ const exercicio3 = () => {
 
   const changeColor = async () => {
     btnChangeColor.disabled = true;
-    btnResetColor.disabled = true;
-
+    let i = 0;
 
     const color = new Promise((resolve) => {
-      setTimeout(() => {
-        btnResetColor.disabled = false;
-        btnChangeColor.disabled = false;
-        resolve(colors[Math.floor(Math.random() * colors.length)]);
+      const interval = setInterval(() => {
+        i++;
+        if (i === colors.length) {
+          i = 0;
+        }
+        resolve((displayColor.style.backgroundColor = colors[i]));
       }, 2000);
+
+      const resetColor = () => {
+        displayColor.style.backgroundColor = displayColor.style.backgroundColor;
+        btnChangeColor.disabled = false;
+        clearInterval(interval);
+      };
+
+      btnResetColor.addEventListener("click", resetColor);
     });
 
     displayColor.style.backgroundColor = await color;
   };
 
-  const resetColor = () => {
-    displayColor.style.backgroundColor = "transparent";
-  };
-
   btnChangeColor.addEventListener("click", changeColor);
-  btnResetColor.addEventListener("click", resetColor);
 };
