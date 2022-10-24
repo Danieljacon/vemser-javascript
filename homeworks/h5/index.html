@@ -38,6 +38,35 @@
                 <script src="./js/exercicio-1.js"></script>
             </section>
 
+            <section class="exercicio-2 exercicio bg-dark text-white p-2 rounded-3 text-center text-uppercase">
+                Exercício 2
+
+                <button onclick="exercicio2();" type="button" class="btn btn-light mt-2 text-uppercase fw-bold"
+                    data-bs-toggle="modal" data-bs-target="#exercicio-2">
+                    Abrir
+                </button>
+
+                <div class="modal fade" id="exercicio-2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content p-3 d-flex flex-column  bg-dark">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-white">
+                                <h3>Clique no botão para ver a hora atual e aguarde 3 segundos</h2>
+                                <h3 id="e2-showtime" class="text-success"></h3>
+                                <div>
+                                    <button class="btn btn-light" id="e2-btn-showtime">Clique para ver a hora</button>
+                                    <button class="btn btn-light" id="e2-btn-resetime">Resetar a hora</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="./js/exercicio-2.js"></script>
+            </section>
         </main>
         <h1 class="name animation-background">Daniel Jacon - #vemser</h1>
     </div>
