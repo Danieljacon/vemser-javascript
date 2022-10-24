@@ -4,19 +4,18 @@ const exercicio2 = () => {
   const displayShowTime = document.getElementById("e2-showtime");
 
   const showTime = async () => {
-    const time = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(new Date().toLocaleTimeString());
-      }, 2000);
-    });
+    displayShowTime.innerText = new Date().toLocaleTimeString();
 
-    displayShowTime.innerText = await time;
-  };
+    const time = setInterval(() => {
+      displayShowTime.innerText = new Date().toLocaleTimeString();
+    }, 2000);
 
-  const resetTime = () => {
-    displayShowTime.innerText = "";
+    const resetTime = () => {
+      clearInterval(time);
+      displayShowTime.innerText = displayShowTime.innerText;
+    };
+    btnResetTime.addEventListener("click", resetTime);
   };
 
   btnShowTime.addEventListener("click", showTime);
-  btnResetTime.addEventListener("click", resetTime);
 };
