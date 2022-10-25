@@ -4,10 +4,14 @@ const exercicio2 = () => {
   const displayShowTime = document.getElementById("e2-showtime");
 
   const showTime = () => {
-    displayShowTime.innerText = new Date().toLocaleTimeString();
+    const timeString = () => {
+      return (displayShowTime.innerText = new Date().toLocaleTimeString());
+    };
+
+    timeString();
 
     const time = setInterval(() => {
-      displayShowTime.innerText = new Date().toLocaleTimeString();
+      timeString();
     }, 2000);
 
     const resetTime = () => {
