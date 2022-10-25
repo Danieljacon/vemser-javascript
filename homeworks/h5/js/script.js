@@ -1,5 +1,7 @@
 const cards = document.getElementById("cards");
+const formComments = document.getElementById("form-comments");
 const apiUrl = "https://jsonplaceholder.typicode.com/photos?_limit=10";
+let id = 1;
 
 const getCards = async () => {
   const response = await fetch(apiUrl);
@@ -7,6 +9,8 @@ const getCards = async () => {
 
   const cardSelected = (e) => {
     const card = e.target;
+    id = parseInt(card.getAttribute("data-id"));
+    console.log(id);
   };
 
   try {
@@ -16,21 +20,23 @@ const getCards = async () => {
                 <div class="card">
                     <img src="${e.thumbnailUrl}">
                     <div>
-                        <button class="btn" id="card-${e.id}"><i class="fa-regular fa-comment"></i>Comentários</button>
+                        <button class="btn" data-id="${e.id}"><i class="fa-regular fa-comment"></i>Comentários</button>
                         <p>${e.title}</p>
                     </div>
                 </div>
             `;
       });
-    //   document.getElementById("cards").addEventListener("click", cardSelected);
+
+      const getByDataId = document.querySelectorAll("[data-id]");
+      getByDataId.forEach((e) => {
+        e.addEventListener("click", cardSelected);
+      });
     } else {
-      cards.innerHTML = `
-        <h1>Houve algum problema!</h1>
-    `;
+        throw ("Não foi possível carregar os dados");
     }
   } catch (err) {
     cards.innerHTML = `
-        <h1>Houve algum problema!</h1>
+        <h1>${err}</h1>
     `;
   }
 };
