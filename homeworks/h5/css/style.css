@@ -96,3 +96,76 @@ body {
 .home .card > div > p::first-letter {
   text-transform: uppercase;
 }
+
+.post {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 328px;
+  height: 100vh;
+  overflow-y: auto;
+}
+.post > img {
+  border-radius: 0.8125rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.post > form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.post > form > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.post > form > div label {
+  font-weight: 600;
+  min-width: 80px;
+  margin-right: 0.5rem;
+}
+.post > form > div input,
+.post > form > div textarea {
+  border: none;
+  border-radius: 0.8125rem;
+  padding: 0.5rem;
+  width: 100%;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  resize: none;
+}
+.post > form > div input:focus,
+.post > form > div textarea:focus {
+  outline: 2px solid #0275B1;
+}
+.post > form > div textarea {
+  padding: 12px 8px;
+}
+.post > form > div .label-msg {
+  padding-bottom: 18px;
+}
+.post #comments {
+  display: flex;
+  flex-direction: column;
+}
+.post #comments > div {
+  margin: 4px 0;
+}
+.post #comments > div small {
+  padding: 2px 0;
+}
+.post #comments > div small i {
+  color: #0275B1;
+  margin-right: 4px;
+}
+.post #comments > div p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #0275B1;
+  padding-left: 4px;
+}
