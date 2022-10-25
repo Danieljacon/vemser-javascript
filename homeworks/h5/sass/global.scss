@@ -1,0 +1,51 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./animation.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+  color: $text-dark;
+}
+
+* a,
+* input,
+* li,
+body {
+  font-family: "Maven Pro", sans-serif;
+  color: $text-dark;
+}
+
+.container {
+  max-width: 984px;
+  margin: 0 auto;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.btn {
+  @include center-items;
+  border-radius: $super-large;
+  border: none;
+  padding: 6px 14px;
+  background-color: $blue-50;
+  color: $text-light;
+  opacity: 0.9;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: $main-shadow;
+
+  &:hover {
+    animation: size 1s ease-in-out infinite;
+  }
+}
+
+@import "./home.scss";
+@import "./post.scss";

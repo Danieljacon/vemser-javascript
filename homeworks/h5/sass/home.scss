@@ -1,0 +1,30 @@
+.home {
+    display: flex;
+
+    .card {
+        border-radius: $border-radius-1;
+        width: 100%;
+        max-width: 200px;
+        box-shadow: $main-shadow;
+
+        img {
+            border-radius: $border-radius-1;
+            width: 100%;
+        }
+
+        > div {
+            padding: 42px 12px 12px 12px;
+            margin-top: -62px;
+            > button {
+                margin-bottom: $mini-large;
+            }
+            > p {
+                font-weight: 300;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+@keyframes size {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+  color: #333333;
+}
+
+* a,
+* input,
+* li,
+body {
+  font-family: "Maven Pro", sans-serif;
+  color: #333333;
+}
+
+.container {
+  max-width: 984px;
+  margin: 0 auto;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  border: none;
+  padding: 6px 14px;
+  background-color: #0275B1;
+  color: #FFFFFF;
+  opacity: 0.9;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  animation: size 1s ease-in-out infinite;
+}
+
+.home {
+  display: flex;
+}
+.home .card {
+  border-radius: 0.8125rem;
+  width: 100%;
+  max-width: 200px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.home .card img {
+  border-radius: 0.8125rem;
+  width: 100%;
+}
+.home .card > div {
+  padding: 42px 12px 12px 12px;
+  margin-top: -62px;
+}
+.home .card > div > button {
+  margin-bottom: 0.5rem;
+}
+.home .card > div > p {
+  font-weight: 300;
+}
+.home .card > div > p::first-letter {
+  text-transform: uppercase;
+}
