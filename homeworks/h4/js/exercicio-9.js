@@ -11,7 +11,7 @@ const exercicio9 = () => {
 
   const CALABRESA = "calabresa ";
   const MAFIOSA = "mafiosa ";
-  const QUATRO_QUEIJOS = "quatro queijos";
+  const QUATRO_QUEIJOS = "quatro queijos ";
   const MUSSARELA = "mussarela ";
 
   const clientes = [
