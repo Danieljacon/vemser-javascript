@@ -28,6 +28,10 @@ body {
 .column {
   display: grid;
   grid-template-columns: 2fr 1fr;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 100%;
+  }
 }
 
 .btn {
@@ -41,9 +45,14 @@ body {
   cursor: pointer;
   font-weight: 600;
   box-shadow: $main-shadow;
+  gap: $mini-large;
 
   &:hover {
     animation: size 1s ease-in-out infinite;
+  }
+
+  > i {
+    color: $text-light;
   }
 }
 
