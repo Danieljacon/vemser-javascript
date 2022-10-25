@@ -3,7 +3,7 @@ const exercicio2 = () => {
   const btnResetTime = document.getElementById("e2-btn-resetime");
   const displayShowTime = document.getElementById("e2-showtime");
 
-  const showTime = async () => {
+  const showTime = () => {
     displayShowTime.innerText = new Date().toLocaleTimeString();
 
     const time = setInterval(() => {
