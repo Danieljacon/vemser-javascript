@@ -6,22 +6,47 @@ const inputEmail = document.getElementById("input-email");
 const inputMessage = document.getElementById("input-mensagem");
 const apiUrl = "https://jsonplaceholder.typicode.com/photos?_limit=3";
 let id = 1;
+let commentsArray = [
+  {
+    id: 0,
+    idMessage: 2,
+    email: "danielcamillo2020@gmail.com",
+    message: "testando",
+  },
+  {
+    id: 1,
+    idMessage: 1,
+    email: "danielcamillo2020@gmail.com",
+    message: "testsdasfdfsaando",
+  },
+];
 
-const addComments = (e) => {
+const addComments = (e, commentsArray, id) => {
   e.preventDefault();
+
   const email = inputEmail.value;
   const message = inputMessage.value;
 
-  if (message !== "") {
-    comments.innerHTML += `
-                <div>
-                    <small><i class="fa-regular fa-envelope"></i>${email.value}</small>
-                    <p>${message.value}</p>
-                </div>
-            `;
+  if (email === "" || message === "") {
+    alert("Preencha todos os campos");
+    return;
   } else {
-    alert("Preencha os campos");
+    commentsArray.push({
+      id: commentsArray.length,
+      idMessage: id,
+      email: email,
+      message: message,
+    });
   }
+
+  comments.innerHTML += `
+              <div>
+                  <small><i class="fa-regular fa-envelope"></i>${email}</small>
+                  <p>${message}</p>
+              </div>
+      `;
+
+  inputMessage.value = "";
 };
 
 const getCards = async () => {
@@ -31,12 +56,22 @@ const getCards = async () => {
   const cardSelected = (e) => {
     const card = e.target;
     id = parseInt(card.getAttribute("data-id"));
-    // console.log(id);
 
     const cardSelected = data.filter((item) => item.id === id);
-    console.log(cardSelected);
-    // cardImage change image
     cardImage.src = cardSelected[0].url;
+
+    const commentsSelected = commentsArray.filter(
+      (item) => item.idMessage === id
+    );
+    comments.innerHTML = "";
+    commentsSelected.map((item) => {
+      comments.innerHTML += `
+                <div>
+                    <small><i class="fa-regular fa-envelope"></i>${item.email}</small>
+                    <p>${item.message}</p>
+                </div>
+        `;
+    });
   };
 
   try {
@@ -57,6 +92,10 @@ const getCards = async () => {
       getByDataId.forEach((e) => {
         e.addEventListener("click", cardSelected);
       });
+
+      formComments.addEventListener("submit", (e) =>
+        addComments(e, commentsArray, id)
+      );
     } else {
       throw "Não foi possível carregar os dados";
     }
