@@ -22,6 +22,15 @@ let commentsArray = [
   },
 ];
 
+const commentHtml = (email, message) => {
+  return `
+    <div>
+        <small><i class="fa-regular fa-envelope"></i>${email}</small>
+        <p>${message}</p>
+    </div>
+    `;
+};
+
 const addComments = (e, commentsArray, id) => {
   e.preventDefault();
 
@@ -40,12 +49,7 @@ const addComments = (e, commentsArray, id) => {
     });
   }
 
-  comments.innerHTML += `
-              <div>
-                  <small><i class="fa-regular fa-envelope"></i>${email}</small>
-                  <p>${message}</p>
-              </div>
-      `;
+  comments.innerHTML += commentHtml(email, message);
 
   inputMessage.value = "";
 };
@@ -66,17 +70,12 @@ const getCards = async () => {
     );
     comments.innerHTML = "";
     commentsSelected.map((item) => {
-      comments.innerHTML += `
-                <div>
-                    <small><i class="fa-regular fa-envelope"></i>${item.email}</small>
-                    <p>${item.message}</p>
-                </div>
-        `;
+      comments.innerHTML += commentHtml(item.email, item.message);
     });
   };
 
   try {
-    if (data !== null) {
+    if (data) {
       data.map((e) => {
         cards.innerHTML += `
                 <div class="card">
@@ -97,9 +96,7 @@ const getCards = async () => {
       formComments.addEventListener("submit", (e) =>
         addComments(e, commentsArray, id)
       );
-    } else {
-      throw "Não foi possível carregar os dados";
-    }
+    } else throw "Não foi possível carregar os dados";
   } catch (err) {
     cards.innerHTML = `
         <h1>${err}</h1>
