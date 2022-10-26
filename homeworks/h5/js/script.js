@@ -4,7 +4,7 @@ const cardImage = document.getElementById("card-image");
 const formComments = document.getElementById("form-comments");
 const inputEmail = document.getElementById("input-email");
 const inputMessage = document.getElementById("input-mensagem");
-const apiUrl = "https://jsonplaceholder.typicode.com/photos?_limit=3";
+const apiUrl = "https://jsonplaceholder.typicode.com/photos?_limit=20";
 let id = 1;
 let commentsArray = [
   {
