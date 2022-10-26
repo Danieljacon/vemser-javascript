@@ -4,20 +4,21 @@ const cardImage = document.getElementById("card-image");
 const formComments = document.getElementById("form-comments");
 const inputEmail = document.getElementById("input-email");
 const inputMessage = document.getElementById("input-mensagem");
-const apiUrl = "https://jsonplaceholder.typicode.com/photos?_limit=20";
+const apiUrl = "https://jsonplaceholder.typicode.com/photos?_limit=8";
 let id = 1;
+
 let commentsArray = [
   {
     id: 0,
     idMessage: 2,
     email: "danielcamillo2020@gmail.com",
-    message: "testando",
+    message: "Esse é o primeiro teste, e tá funcionando s2",
   },
   {
     id: 1,
     idMessage: 1,
     email: "danielcamillo2020@gmail.com",
-    message: "testsdasfdfsaando",
+    message: "Boa",
   },
 ];
 

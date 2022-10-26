@@ -26,6 +26,13 @@ body {
   color: #333333;
 }
 
+body {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .container {
   max-width: 984px;
   margin: 0 auto;
@@ -34,6 +41,7 @@ body {
 .column {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding: 0.75rem 0;
 }
 @media (max-width: 768px) {
   .column {
@@ -66,8 +74,8 @@ body {
 .home {
   display: flex;
   gap: 0.75rem;
-  padding: 0.75rem;
   flex-wrap: wrap;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,6 +85,9 @@ body {
   width: 100%;
   max-width: 200px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  padding: 1px;
 }
 .home .card img {
   border-radius: 0.8125rem;
@@ -102,17 +113,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 328px;
-  height: 100vh;
-  overflow-y: auto;
+  height: fit-content;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 0.8125rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .post > img {
   border-radius: 0.8125rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   width: 100%;
+  animation: size 10s ease-in-out infinite;
 }
 .post > form {
   display: flex;
@@ -155,6 +166,7 @@ body {
 }
 .post #comments > div {
   margin: 4px 0;
+  animation: size 0.5s ease-in-out forwards;
 }
 .post #comments > div small {
   padding: 2px 0;

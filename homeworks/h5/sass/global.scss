@@ -20,6 +20,13 @@ body {
   color: $text-dark;
 }
 
+body {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .container {
   max-width: 984px;
   margin: 0 auto;
@@ -28,6 +35,7 @@ body {
 .column {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding: $super-small 0;
 
   @media (max-width: $mobile) {
     grid-template-columns: 100%;
