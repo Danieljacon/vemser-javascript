@@ -52,6 +52,7 @@ const addComments = (e, commentsArray, id) => {
   comments.innerHTML += commentHtml(email, message);
 
   inputMessage.value = "";
+  inputEmail.value = "";
 };
 
 const getCards = async () => {
